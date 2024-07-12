@@ -1,0 +1,377 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mary Jane's Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <style>
+      
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background-color: #E0E7E9;
+        }
+        
+        .about {
+            background-color: #CBD0D8; 
+        }
+        
+
+        .works {
+            background-color: #E0E7E9; 
+        }
+
+        .contact {
+            background-color: #CBD0D8; 
+        }
+
+        .header {
+            background-color: #354649;
+            color: #6f768b;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header .logo {
+            font-size: 24px;
+            color: white;
+        }
+
+        .logo img {
+            width: 50px;
+            height: 50px;
+            margin-right: 20px;
+        }
+
+        .logo span {
+            font-size: 30px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .header .navbar a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+
+        .header .navbar a.active {
+            color: #A3C6C4 ;
+        }
+
+        .header .bx-menu {
+            font-size: 24px;
+            cursor: pointer;
+            display: none;
+        }
+
+        .section {
+            padding: 60px 20px;
+            background-color: #fff;
+            margin-bottom: 20px;
+        }
+
+        .home, .about, .works, .contact {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .home-content, .about-content {
+            text-align: left;
+            display: block;
+            flex-direction: column;
+            align-items: center;
+        }
+
+
+        .about-content .btn {
+        margin-top: 20px;
+        }
+
+        .home-content h1 {
+            color: #A3C6C4 ;
+            margin: 10px 0;
+        }
+
+        .social-media a {
+            color: #333;
+            margin: 0 10px;
+            font-size: 24px;
+        }
+
+        .social-media a:hover {
+            color: #A3C6C4 ;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            color: white;
+            background-color: #000000;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #333;
+        }
+
+        .works-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .works-box {
+            position: relative;
+            width: 300px;
+            overflow: hidden;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            transition: transform 0.3s ease;
+        }
+
+        .works-box:hover {
+            transform: scale(1.05);
+        }
+        
+        .works-box img {
+            width: 100%;
+        }
+
+        .works-layer {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        
+        .works-box:hover .works-layer {
+            opacity: 1;
+        }
+
+        .contact form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .contact .input-box {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            max-width: 600px;
+        }
+
+        .contact .input-box input {
+            width: 48%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        .contact textarea {
+            width: 100%;
+            max-width: 600px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px 20px;
+            background-color: #354649;
+            color: white;
+        }
+
+        
+
+    
+        @media (max-width: 768px) {
+            .header .navbar {
+                display: none;
+                flex-direction: column;
+            }
+            .header .bx-menu {
+                display: block;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <a href="#" class="logo">
+          <img src="C:\Users\GOD IS GOOD\Videos\Jane\images\j.png" height="100px" alt="Logo">
+          <span>Portfolio</span>
+        </a>
+        <i class="bx bx-menu" id="menu-icon"></i>
+        <nav class="navbar">
+          <a href="#home" class="active"><b>Home</b></a>
+          <a href="#about"><b>About</b></a>
+          <a href="#works"><b>Works</b></a>
+          <a href="#contact"><b>Contact</b></a>
+        </nav>
+      </header>
+
+    <section class="home" id="home">
+        <div class="home-content">
+            <div class="home-img" style="float: left; margin-right: 20px;">
+                <img src="C:\Users\GOD IS GOOD\Videos\Jane\images\aboutme.jpg"  height="207px">
+            </div>
+            <div style="overflow: hidden;">
+                <h3>Hello, It's Me</h3>
+                <h1 class="heading"><span style="color: #6C7A89  ;">Jane</span></h1>
+                <p>Hi, I'm Mary Jane Zeta, a dedicated and results-driven IT professional with a passion for delivering exceptional solutions. 
+                    With expertise in Python, Java, and JavaScript, I excel in creating tailored solutions that meet my clients unique needs.
+                    I'm committed to understanding your goals and objectives, and delivering high-quality results on time and within budget. 
+                    Let's work together to achieve your vision.</p>
+                </div>
+            </div>    
+        </section>
+
+    <section class="about" id="about">
+        <div class="about-content">
+            <h2 class="heading">About <span style="color: #6C7A89;">Me</span></h2>
+            <h3>Hello! My name is Mary Jane Zeta </h3>
+            <p> I'm a second-year student pursuing a Bachelor of Science in Information Technology at Dalubhasaan ng Lungsod ng Lucena.
+                I'm excited to share my portfolio with you, which showcases my skills and experiences in the field of IT. 
+                With a strong passion for technology and a desire to continuously learn and grow, I'm committed to developing innovative solutions that make a positive impact.
+                Through this portfolio, I hope to give you a glimpse into my academic and professional journey, and I look forward to connecting with you.</p>
+            <div class="social-media">
+                <a href="https://www.facebook.com/mryjnprtty/"><i class='bx bxl-facebook-circle'></i></a>
+                <a href="https://github.com/Janey9618"><i class='bx bxl-github'></i></a>
+                <a href="https://www.instagram.com/mryjnprtty_/?hl=en"><i class= 'bx bxl-instagram-alt'></i></a>
+                <a href="https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox"><i class='bx bxs-envelope'></i></a>
+                </div> 
+            <a href="https://janey0918.github.io/resume_online/" class="btn">Download CV</a>
+        </div>
+    </section>
+
+    <section class="works" id="works">
+        <h2 class="heading">Latest Works</h2>
+        <div class="works-container">
+            <div class="works-box">
+                <a href="https://janey0918.github.io/resume_online/"><img src="C:\Users\GOD IS GOOD\Videos\Jane\images\resume.png" height="259px"></a>
+                <div class="works-layer">
+                    <h4></h4>
+                    <a href="#"><i class='bx bx-link-alt'></i></a>
+                </div>
+            </div>
+            <div class="works-box">
+                <a href="https://janey9618.github.io/IPT101_calculator-app/"><img src="C:\Users\GOD IS GOOD\Videos\Jane\images\calcu.png" height="259px"></a>
+                <div class="works-layer">
+                    <h4></h4>
+                    <a href="#"><i class='bx bx-link-alt'></i></a>
+                </div>
+            </div>
+            <div class="works-box">
+                <a href="https://janey9618.github.io/rock-paper-scissor/"><img src="/images/rps.png" width="159px" height="259px"></a>
+                <div class="works-layer">
+                    <h4></h4>
+                </div>
+            </div>
+        
+    </section>
+
+    <section class="contact" id="contact">
+        <h2 class="heading">Contact Me</h2>
+        <form action="#">
+            <div class="input-box">
+                <input type="text" placeholder="Full Name" id="full-name">
+                <input type="email" placeholder="Email" id="email">
+            </div>
+            <textarea name="" id="message" cols="30" rows="10" placeholder="Message"></textarea>
+            <input type="submit" value="Message" class="btn">
+        </form>
+    </section>
+
+    <footer>
+        <p>@2024 Mary Jane. All rights reserved.</p>
+    </footer>
+   
+    <script>
+        // Toggle Navigation Menu
+        const menuIcon = document.getElementById('menu-icon');
+        const navbar = document.querySelector('.navbar');
+
+        menuIcon.addEventListener('click', () => {
+            navbar.classList.toggle('active');
+        });
+
+        // Smooth Scrolling
+        document.querySelectorAll('.navbar a').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Active Link Highlighting
+        const sections = document.querySelectorAll('section');
+        const navLinks = document.querySelectorAll('.navbar a');
+
+        window.addEventListener('scroll', () => {
+            let current = '';
+
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                if (pageYOffset >= sectionTop - 60) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === `#${current}`) {
+                    link.classList.add('active');
+                }
+            });
+        });
+
+        // Form Validation
+        const form = document.querySelector('form');
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const fullName = document.getElementById('full-name').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+
+            if (fullName === '' || email === '' || message === '') {
+                alert('Please fill in all fields.');
+            } else if (!validateEmail(email)) {
+                alert('Please enter a valid email address.');
+            } else {
+                alert('Form submitted successfully!');
+            }
+        });
+
+        function validateEmail(email) {
+            const re = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+            return re.test(String(email).toLowerCase());
+        }
+    </script>
+</body>
+</html>
